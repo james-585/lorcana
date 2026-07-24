@@ -9,7 +9,11 @@
       "strength": 2,
       "willpower": 1,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Belle - Strange but Special",
@@ -20,7 +24,17 @@
       "strength": 1,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "ramp",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Dopey - Always Playful",
@@ -31,7 +45,11 @@
       "strength": 1,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Pascal - Rapunzel's Companion",
@@ -42,7 +60,11 @@
       "strength": 1,
       "willpower": 1,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Heihei - Boat Snack",
@@ -53,7 +75,11 @@
       "strength": 1,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Pua - Loyal Piglet",
@@ -64,7 +90,11 @@
       "strength": 1,
       "willpower": 1,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Aladdin - Street Rat",
@@ -75,7 +105,11 @@
       "strength": 2,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Moana - Of Motunui",
@@ -86,7 +120,11 @@
       "strength": 2,
       "willpower": 3,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Genie - On the Job",
@@ -97,7 +135,17 @@
       "strength": 1,
       "willpower": 3,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "draw",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Jafar - Royal Vizier",
@@ -108,7 +156,11 @@
       "strength": 1,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Flounder - Ariel's Best Friend",
@@ -119,7 +171,11 @@
       "strength": 1,
       "willpower": 3,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Peter Pan - Fearless Fighter",
@@ -132,7 +188,11 @@
       "lore": 1,
       "keywords": [
         "Evasive"
-      ]
+      ],
+      "set_code": "7",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Chip - Talking Teacup",
@@ -143,7 +203,11 @@
       "strength": 1,
       "willpower": 1,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Tigger - Wonderful Thing",
@@ -156,7 +220,11 @@
       "lore": 1,
       "keywords": [
         "Rush"
-      ]
+      ],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Abu - Sticky Fingers",
@@ -167,7 +235,11 @@
       "strength": 1,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Tinker Bell - Giant Fairy",
@@ -180,7 +252,11 @@
       "lore": 1,
       "keywords": [
         "Rush"
-      ]
+      ],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Gaston - Arrogant Hunter",
@@ -193,7 +269,11 @@
       "lore": 1,
       "keywords": [
         "Reckless"
-      ]
+      ],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Ariel - On Human Legs",
@@ -204,7 +284,13 @@
       "strength": 2,
       "willpower": 3,
       "lore": 2,
-      "keywords": []
+      "keywords": [
+        "Singer 4"
+      ],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Cinderella - Ballroom Sensation",
@@ -215,7 +301,13 @@
       "strength": 2,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [
+        "Singer 5"
+      ],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Rapunzel - Gifted with Healing",
@@ -226,7 +318,17 @@
       "strength": 1,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "on_quest",
+          "effect": "heal",
+          "amount": 2
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Aurora - Dreaming Guardian",
@@ -237,7 +339,11 @@
       "strength": 2,
       "willpower": 3,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Kristoff - Reindeer Keeper",
@@ -248,7 +354,13 @@
       "strength": 3,
       "willpower": 3,
       "lore": 1,
-      "keywords": []
+      "keywords": [
+        "Support"
+      ],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Lady - Faithful Companion",
@@ -259,7 +371,11 @@
       "strength": 2,
       "willpower": 3,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Kuzco - Temperamental Emperor",
@@ -270,7 +386,11 @@
       "strength": 3,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Mickey Mouse - Brave Little Tailor",
@@ -283,7 +403,11 @@
       "lore": 2,
       "keywords": [
         "Bodyguard"
-      ]
+      ],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Peter Pan - Never Landed",
@@ -296,7 +420,11 @@
       "lore": 2,
       "keywords": [
         "Evasive"
-      ]
+      ],
+      "set_code": "4",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Mulan - Reflecting",
@@ -309,7 +437,11 @@
       "lore": 2,
       "keywords": [
         "Ward"
-      ]
+      ],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Anna - Heir to Arendelle",
@@ -320,7 +452,11 @@
       "strength": 3,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "John Silver - Alien Sailor",
@@ -331,7 +467,11 @@
       "strength": 4,
       "willpower": 3,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "5",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Ursula - Deal-Maker",
@@ -342,7 +482,11 @@
       "strength": 3,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Prince Phillip - Dragonslayer",
@@ -353,7 +497,11 @@
       "strength": 3,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Quasimodo - Bellringer",
@@ -364,7 +512,11 @@
       "strength": 3,
       "willpower": 5,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Beast - Hardheaded",
@@ -377,7 +529,11 @@
       "lore": 1,
       "keywords": [
         "Bodyguard"
-      ]
+      ],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Stitch - Rock Star",
@@ -388,7 +544,19 @@
       "strength": 3,
       "willpower": 5,
       "lore": 2,
-      "keywords": []
+      "keywords": [
+        "Shift 3"
+      ],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "on_quest",
+          "effect": "draw",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Scar - Vicious Cheater",
@@ -401,7 +569,11 @@
       "lore": 2,
       "keywords": [
         "Reckless"
-      ]
+      ],
+      "set_code": "6",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Yzma - Scheming Genius",
@@ -412,7 +584,17 @@
       "strength": 3,
       "willpower": 5,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "damage",
+          "amount": 2
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Merida - Headstrong",
@@ -423,7 +605,11 @@
       "strength": 4,
       "willpower": 3,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Tiana - Hard Worker",
@@ -434,7 +620,17 @@
       "strength": 3,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "2",
+      "abilities": [
+        {
+          "trigger": "on_quest",
+          "effect": "gain_lore",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Captain Hook - Ruthless Pirate",
@@ -445,7 +641,11 @@
       "strength": 4,
       "willpower": 5,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "5",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Elsa - Snow Queen",
@@ -456,7 +656,17 @@
       "strength": 4,
       "willpower": 6,
       "lore": 3,
-      "keywords": []
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "damage",
+          "amount": 3
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Hades - Infernal Schemer",
@@ -467,7 +677,11 @@
       "strength": 5,
       "willpower": 6,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Chernabog - Evildoer",
@@ -478,7 +692,11 @@
       "strength": 6,
       "willpower": 6,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Te K\u0101 - The Burning One",
@@ -489,7 +707,11 @@
       "strength": 5,
       "willpower": 6,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Maleficent - Sorceress",
@@ -500,7 +722,11 @@
       "strength": 4,
       "willpower": 5,
       "lore": 3,
-      "keywords": []
+      "keywords": [],
+      "set_code": "6",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Yen Sid - Powerful Sorcerer",
@@ -511,7 +737,17 @@
       "strength": 3,
       "willpower": 7,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [
+        {
+          "trigger": "start_of_turn",
+          "effect": "draw",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Maui - Half-Shark",
@@ -522,7 +758,13 @@
       "strength": 6,
       "willpower": 7,
       "lore": 2,
-      "keywords": []
+      "keywords": [
+        "Shift 5"
+      ],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Elsa - Spirit of Winter",
@@ -533,7 +775,19 @@
       "strength": 5,
       "willpower": 7,
       "lore": 3,
-      "keywords": []
+      "keywords": [
+        "Shift 5"
+      ],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "damage",
+          "amount": 2
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Cinderella - Knight in Training",
@@ -546,7 +800,11 @@
       "lore": 2,
       "keywords": [
         "Bodyguard"
-      ]
+      ],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Facilier - Vaudou Priest",
@@ -557,7 +815,11 @@
       "strength": 4,
       "willpower": 6,
       "lore": 3,
-      "keywords": []
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Sisu - Empowered by Faith",
@@ -568,7 +830,11 @@
       "strength": 6,
       "willpower": 8,
       "lore": 3,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Cruella De Vil - Miserable As Usual",
@@ -579,7 +845,11 @@
       "strength": 5,
       "willpower": 7,
       "lore": 3,
-      "keywords": []
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Jasmine - Heir to the Throne",
@@ -590,7 +860,11 @@
       "strength": 2,
       "willpower": 3,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Naveen - Prince of Maldonia",
@@ -601,7 +875,11 @@
       "strength": 2,
       "willpower": 4,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "7",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Dory - Forgetful Friend",
@@ -612,7 +890,11 @@
       "strength": 1,
       "willpower": 1,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "5",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Nick Wilde - Wily Fox",
@@ -623,7 +905,11 @@
       "strength": 2,
       "willpower": 2,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "6",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Judy Hopps - Rookie Officer",
@@ -634,7 +920,11 @@
       "strength": 2,
       "willpower": 4,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "7",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Baloo - The Bare Necessities",
@@ -645,7 +935,11 @@
       "strength": 3,
       "willpower": 4,
       "lore": 1,
-      "keywords": []
+      "keywords": [],
+      "set_code": "3",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Shere Khan - Ruthless Tiger",
@@ -658,7 +952,11 @@
       "lore": 1,
       "keywords": [
         "Reckless"
-      ]
+      ],
+      "set_code": "10",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Mrs. Potts - Head of the House",
@@ -669,7 +967,17 @@
       "strength": 1,
       "willpower": 3,
       "lore": 2,
-      "keywords": []
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [
+        {
+          "trigger": "start_of_turn",
+          "effect": "heal",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     },
     {
       "name": "Lumiere - Fluid Performer",
@@ -680,7 +988,283 @@
       "strength": 2,
       "willpower": 3,
       "lore": 2,
-      "keywords": []
+      "keywords": [
+        "Support"
+      ],
+      "set_code": "13",
+      "abilities": [],
+      "song": false,
+      "move_cost": 1
+    },
+    {
+      "name": "Fishbone Quill",
+      "type": "item",
+      "cost": 2,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "start_of_turn",
+          "effect": "ramp",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
+    },
+    {
+      "name": "Dinglehopper",
+      "type": "item",
+      "cost": 1,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [
+        {
+          "trigger": "start_of_turn",
+          "effect": "heal",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
+    },
+    {
+      "name": "Magic Golden Flower",
+      "type": "item",
+      "cost": 3,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "11",
+      "abilities": [
+        {
+          "trigger": "start_of_turn",
+          "effect": "heal",
+          "amount": 2
+        }
+      ],
+      "song": false,
+      "move_cost": 1
+    },
+    {
+      "name": "Sorcerer's Hat",
+      "type": "item",
+      "cost": 3,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "12",
+      "abilities": [
+        {
+          "trigger": "start_of_turn",
+          "effect": "draw",
+          "amount": 1
+        }
+      ],
+      "song": false,
+      "move_cost": 1
+    },
+    {
+      "name": "Motunui - Island Paradise",
+      "type": "location",
+      "cost": 4,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 7,
+      "lore": 2,
+      "keywords": [],
+      "set_code": "9",
+      "move_cost": 1,
+      "abilities": [],
+      "song": false
+    },
+    {
+      "name": "Arendelle - Frozen Kingdom",
+      "type": "location",
+      "cost": 3,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 5,
+      "lore": 1,
+      "keywords": [],
+      "set_code": "10",
+      "move_cost": 1,
+      "abilities": [],
+      "song": false
+    },
+    {
+      "name": "The Queen's Castle",
+      "type": "location",
+      "cost": 5,
+      "ink_color": "Amber",
+      "inkable": false,
+      "strength": 0,
+      "willpower": 8,
+      "lore": 2,
+      "keywords": [],
+      "set_code": "11",
+      "move_cost": 2,
+      "abilities": [],
+      "song": false
+    },
+    {
+      "name": "Pride Lands - Jungle Oasis",
+      "type": "location",
+      "cost": 2,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 4,
+      "lore": 1,
+      "keywords": [],
+      "set_code": "13",
+      "move_cost": 1,
+      "abilities": [],
+      "song": false
+    },
+    {
+      "name": "Friends on the Other Side",
+      "type": "action",
+      "cost": 3,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "9",
+      "song": true,
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "draw",
+          "amount": 2
+        }
+      ],
+      "move_cost": 1
+    },
+    {
+      "name": "Let It Go",
+      "type": "action",
+      "cost": 5,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "10",
+      "song": true,
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "damage",
+          "amount": 4
+        }
+      ],
+      "move_cost": 1
+    },
+    {
+      "name": "A Whole New World",
+      "type": "action",
+      "cost": 5,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "11",
+      "song": true,
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "draw",
+          "amount": 3
+        }
+      ],
+      "move_cost": 1
+    },
+    {
+      "name": "Be Our Guest",
+      "type": "action",
+      "cost": 2,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "12",
+      "song": true,
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "draw",
+          "amount": 1
+        }
+      ],
+      "move_cost": 1
+    },
+    {
+      "name": "Ransack",
+      "type": "action",
+      "cost": 2,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "9",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "draw",
+          "amount": 2
+        }
+      ],
+      "song": false,
+      "move_cost": 1
+    },
+    {
+      "name": "Smash",
+      "type": "action",
+      "cost": 1,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 0,
+      "willpower": 0,
+      "lore": 0,
+      "keywords": [],
+      "set_code": "10",
+      "abilities": [
+        {
+          "trigger": "on_play",
+          "effect": "damage",
+          "amount": 3
+        }
+      ],
+      "song": false,
+      "move_cost": 1
     }
   ]
 }
