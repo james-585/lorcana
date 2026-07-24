@@ -1,0 +1,686 @@
+{
+  "cards": [
+    {
+      "name": "Simba - Protective Cub",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 1,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Belle - Strange but Special",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Dopey - Always Playful",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Pascal - Rapunzel's Companion",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 1,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Heihei - Boat Snack",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Pua - Loyal Piglet",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 1,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Aladdin - Street Rat",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Moana - Of Motunui",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Genie - On the Job",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Jafar - Royal Vizier",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Flounder - Ariel's Best Friend",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Peter Pan - Fearless Fighter",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": [
+        "Evasive"
+      ]
+    },
+    {
+      "name": "Chip - Talking Teacup",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 1,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Tigger - Wonderful Thing",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 1,
+      "lore": 1,
+      "keywords": [
+        "Rush"
+      ]
+    },
+    {
+      "name": "Abu - Sticky Fingers",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Tinker Bell - Giant Fairy",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": [
+        "Rush"
+      ]
+    },
+    {
+      "name": "Gaston - Arrogant Hunter",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 4,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": [
+        "Reckless"
+      ]
+    },
+    {
+      "name": "Ariel - On Human Legs",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Cinderella - Ballroom Sensation",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Rapunzel - Gifted with Healing",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Aurora - Dreaming Guardian",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Kristoff - Reindeer Keeper",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Lady - Faithful Companion",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Kuzco - Temperamental Emperor",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Mickey Mouse - Brave Little Tailor",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Steel",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": [
+        "Bodyguard"
+      ]
+    },
+    {
+      "name": "Peter Pan - Never Landed",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": [
+        "Evasive"
+      ]
+    },
+    {
+      "name": "Mulan - Reflecting",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Steel",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 5,
+      "lore": 2,
+      "keywords": [
+        "Ward"
+      ]
+    },
+    {
+      "name": "Anna - Heir to Arendelle",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "John Silver - Alien Sailor",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 4,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Ursula - Deal-Maker",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Prince Phillip - Dragonslayer",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Quasimodo - Bellringer",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 5,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Beast - Hardheaded",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Steel",
+      "inkable": false,
+      "strength": 4,
+      "willpower": 4,
+      "lore": 1,
+      "keywords": [
+        "Bodyguard"
+      ]
+    },
+    {
+      "name": "Stitch - Rock Star",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 5,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Scar - Vicious Cheater",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Ruby",
+      "inkable": false,
+      "strength": 5,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": [
+        "Reckless"
+      ]
+    },
+    {
+      "name": "Yzma - Scheming Genius",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 5,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Merida - Headstrong",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 4,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Tiana - Hard Worker",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Captain Hook - Ruthless Pirate",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Ruby",
+      "inkable": false,
+      "strength": 4,
+      "willpower": 5,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Elsa - Snow Queen",
+      "type": "character",
+      "cost": 6,
+      "ink_color": "Amethyst",
+      "inkable": false,
+      "strength": 4,
+      "willpower": 6,
+      "lore": 3,
+      "keywords": []
+    },
+    {
+      "name": "Hades - Infernal Schemer",
+      "type": "character",
+      "cost": 6,
+      "ink_color": "Ruby",
+      "inkable": false,
+      "strength": 5,
+      "willpower": 6,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Chernabog - Evildoer",
+      "type": "character",
+      "cost": 6,
+      "ink_color": "Amber",
+      "inkable": false,
+      "strength": 6,
+      "willpower": 6,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Te K\u0101 - The Burning One",
+      "type": "character",
+      "cost": 6,
+      "ink_color": "Sapphire",
+      "inkable": false,
+      "strength": 5,
+      "willpower": 6,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Maleficent - Sorceress",
+      "type": "character",
+      "cost": 6,
+      "ink_color": "Amethyst",
+      "inkable": false,
+      "strength": 4,
+      "willpower": 5,
+      "lore": 3,
+      "keywords": []
+    },
+    {
+      "name": "Yen Sid - Powerful Sorcerer",
+      "type": "character",
+      "cost": 6,
+      "ink_color": "Amethyst",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 7,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Maui - Half-Shark",
+      "type": "character",
+      "cost": 7,
+      "ink_color": "Sapphire",
+      "inkable": false,
+      "strength": 6,
+      "willpower": 7,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Elsa - Spirit of Winter",
+      "type": "character",
+      "cost": 7,
+      "ink_color": "Amethyst",
+      "inkable": false,
+      "strength": 5,
+      "willpower": 7,
+      "lore": 3,
+      "keywords": []
+    },
+    {
+      "name": "Cinderella - Knight in Training",
+      "type": "character",
+      "cost": 7,
+      "ink_color": "Steel",
+      "inkable": false,
+      "strength": 5,
+      "willpower": 6,
+      "lore": 2,
+      "keywords": [
+        "Bodyguard"
+      ]
+    },
+    {
+      "name": "Facilier - Vaudou Priest",
+      "type": "character",
+      "cost": 7,
+      "ink_color": "Amethyst",
+      "inkable": false,
+      "strength": 4,
+      "willpower": 6,
+      "lore": 3,
+      "keywords": []
+    },
+    {
+      "name": "Sisu - Empowered by Faith",
+      "type": "character",
+      "cost": 8,
+      "ink_color": "Ruby",
+      "inkable": false,
+      "strength": 6,
+      "willpower": 8,
+      "lore": 3,
+      "keywords": []
+    },
+    {
+      "name": "Cruella De Vil - Miserable As Usual",
+      "type": "character",
+      "cost": 8,
+      "ink_color": "Amethyst",
+      "inkable": false,
+      "strength": 5,
+      "willpower": 7,
+      "lore": 3,
+      "keywords": []
+    },
+    {
+      "name": "Jasmine - Heir to the Throne",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Naveen - Prince of Maldonia",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 4,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Dory - Forgetful Friend",
+      "type": "character",
+      "cost": 1,
+      "ink_color": "Sapphire",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 1,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Nick Wilde - Wily Fox",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 2,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Judy Hopps - Rookie Officer",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Steel",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 4,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Baloo - The Bare Necessities",
+      "type": "character",
+      "cost": 4,
+      "ink_color": "Emerald",
+      "inkable": true,
+      "strength": 3,
+      "willpower": 4,
+      "lore": 1,
+      "keywords": []
+    },
+    {
+      "name": "Shere Khan - Ruthless Tiger",
+      "type": "character",
+      "cost": 5,
+      "ink_color": "Ruby",
+      "inkable": true,
+      "strength": 5,
+      "willpower": 3,
+      "lore": 1,
+      "keywords": [
+        "Reckless"
+      ]
+    },
+    {
+      "name": "Mrs. Potts - Head of the House",
+      "type": "character",
+      "cost": 2,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 1,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": []
+    },
+    {
+      "name": "Lumiere - Fluid Performer",
+      "type": "character",
+      "cost": 3,
+      "ink_color": "Amber",
+      "inkable": true,
+      "strength": 2,
+      "willpower": 3,
+      "lore": 2,
+      "keywords": []
+    }
+  ]
+}
