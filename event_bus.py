@@ -1,18 +1,30 @@
 """
 Module 4: Event Bus
 ---------------------
-Lorcana keywords like Rush, Bodyguard, Ward, and Reckless don't change the
-*normal* flow of a turn - they each break ONE specific rule. Rather than
-littering the Rules Engine with "if card.has_keyword(...)" checks scattered
-everywhere, we use an event bus: the Rules Engine announces things that are
-happening ("a character just entered play", "a challenge is being declared")
-and any keyword that cares about that moment reacts to it.
+The trigger system. The Rules Engine announces things that happen
+("a card was played", "a character quested"), and anything that cares
+reacts.
 
-This keeps rules_engine.py focused on the *normal* rules, and keeps each
-keyword's special-case logic in one place, named after the keyword.
+WHAT CHANGED: this module used to be architecture without cargo - it
+fired events, but its only two handlers were no-ops that did nothing.
+Now it carries the whole ability system from abilities.py. When a card
+with "when you play this, draw a card" enters play, that ability is
+subscribed here, and the ON_PLAY event actually makes the draw happen.
+
+Keywords are handled in two different places, deliberately:
+
+  * Restriction keywords (Rush, Evasive, Bodyguard, Reckless, Ward)
+    are not events - they change what moves are LEGAL, so they live in
+    rules_engine.get_legal_moves / get_valid_challenge_targets where
+    legality is decided.
+
+  * Triggered keywords (Support, and every card-text ability) DO fire at
+    a moment in time, so they flow through this bus.
 """
 
 from collections import defaultdict
+
+import abilities as ab
 
 
 class EventBus:
@@ -20,38 +32,43 @@ class EventBus:
         self._subscribers = defaultdict(list)
 
     def subscribe(self, event_name: str, handler):
-        """Register a function to run whenever `event_name` is published."""
+        """Register a function to run when `event_name` is published."""
         self._subscribers[event_name].append(handler)
 
     def publish(self, event_name: str, **kwargs):
-        """Announce that something happened. Every subscribed handler for
-        this event name gets called, in the order they subscribed."""
-        for handler in self._subscribers[event_name]:
+        """Announce something happened; run every subscribed handler."""
+        for handler in list(self._subscribers[event_name]):
             handler(**kwargs)
 
-
-# --- Keyword handlers ------------------------------------------------
-# Each of these gets wired up to the bus in rules_engine.py. They're kept
-# here so all the "rule-breaking" logic lives in one readable place.
-
-def handle_bodyguard_entry(card=None, controller=None, **_):
-    """Bodyguard doesn't need to DO anything when it enters play - it's a
-    passive restriction checked at challenge-declaration time (see
-    rules_engine.get_valid_challenge_targets). This handler exists mostly
-    to document that Bodyguard is event-driven at the 'declare challenge'
-    moment, not the 'enters play' moment."""
-    return
+    def clear(self):
+        self._subscribers.clear()
 
 
-def handle_reckless_entry(card=None, controller=None, **_):
-    """Reckless characters can't quest, ever. Like Bodyguard, this is a
-    passive restriction enforced wherever we generate legal moves (see
-    rules_engine.get_legal_moves), rather than something that 'fires'."""
-    return
+def build_bus_for_game(player_a, player_b):
+    """
+    Creates an EventBus and wires up every ability on every card in both
+    players' decks.
+
+    Abilities are registered for cards in ALL zones (deck, hand, play),
+    because a card in the deck will later be played and needs its
+    ability live at that moment. Each handler checks the event is about
+    its own card, so registering early is harmless.
+    """
+    bus = EventBus()
+
+    for owner, foe in ((player_a, player_b), (player_b, player_a)):
+        for zone in (owner.deck, owner.hand, owner.in_play):
+            for card in zone:
+                if card.abilities:
+                    ab.register_card_abilities(bus, card, owner, foe)
+    return bus
 
 
-def register_default_keyword_handlers(bus: EventBus):
-    """Wire up all the keyword handlers this simulator knows about.
-    Call this once per game when you build the EventBus."""
-    bus.subscribe("character_entered_play", handle_bodyguard_entry)
-    bus.subscribe("character_entered_play", handle_reckless_entry)
+# Backwards-compatible alias: earlier versions of this project called
+# this function, and monte_carlo.py may still reference it.
+def register_default_keyword_handlers(bus):
+    """
+    Kept so older code doesn't break. Restriction keywords are enforced
+    in rules_engine.py rather than here, so there is nothing to register.
+    """
+    return bus

@@ -33,6 +33,22 @@ def score_move(move, player, opponent, persona: str) -> float:
         return 5
 
     if kind == "play":
+        card = move.card
+
+        if card.type == "location":
+            # Locations generate passive lore every turn - very strong
+            # over a long game, weak if the game ends fast.
+            base = 14 + card.lore * 8
+            return base + (6 if persona == CONTROL else -2)
+
+        if card.type == "item":
+            base = 12 + card.cost
+            return base + (4 if persona == CONTROL else 0)
+
+        if card.type == "action":
+            # Actions are one-shot; value them by what they cost.
+            return 10 + card.cost * 2
+
         base = 10 + move.card.cost  # bigger plays are usually stronger
         if persona == AGGRO:
             # Aggro loves cheap, immediately-relevant bodies.
@@ -56,6 +72,38 @@ def score_move(move, player, opponent, persona: str) -> float:
             if len(player.characters_in_play()) <= len(opponent.characters_in_play()):
                 base -= 6
         return base
+
+    if kind == "shift":
+        # Shift is efficient: you get a bigger body for less ink, and it
+        # keeps the base character's readiness. Usually strong.
+        base = 25 + move.card.cost - move.card.shift_cost
+        if persona == AGGRO:
+            base += 5      # keeps tempo without losing a turn
+        else:
+            base += move.card.willpower
+        return base
+
+    if kind == "sing":
+        # Singing gets exactly the same effect as playing the song, but
+        # costs no ink - you exert a character instead. So singing should
+        # always beat hard-casting the same song; the only question is
+        # whether the singer had something better to do.
+        song, singer = move.card, move.target
+        effect_value = 10 + song.cost * 2      # same as the "play" score
+        ink_saved = song.cost * 2.5            # not spending ink is real
+        opportunity = singer.lore * 3          # the quest we're giving up
+        base = effect_value + ink_saved - opportunity
+        if persona == AGGRO:
+            base -= 4      # aggro would still usually rather quest
+        else:
+            base += 4      # control values the effect over the lore
+        return base
+
+    if kind == "move":
+        # Moving to a location is only worth it if the location earns
+        # lore; otherwise it's a waste of ink in this simplified model.
+        loc = move.target
+        return 3 + loc.lore * 4 - loc.move_cost * 2
 
     if kind == "challenge":
         attacker, defender = move.card, move.target

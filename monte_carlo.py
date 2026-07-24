@@ -16,27 +16,35 @@ matplotlib.use("Agg")  # write chart to a file, don't need a live display
 import matplotlib.pyplot as plt
 
 from game_state import PlayerState
-from event_bus import EventBus, register_default_keyword_handlers
+from event_bus import build_bus_for_game
 from rules_engine import get_legal_moves, apply_move, check_winner
+import abilities as ab
 from ai import choose_move
 
 MAX_TURNS = 40  # safety valve so a weird stalemate can't loop forever
 
 
-def play_one_game(deck_a, persona_a, deck_b, persona_b) -> dict:
+def play_one_game(deck_a, persona_a, deck_b, persona_b,
+                   use_mulligan: bool = True) -> dict:
     """Simulates a single full game and returns a small result dict:
     {'winner': 'A' or 'B' or 'draw', 'turns': int}"""
 
     player_a = PlayerState("A", deck_a)
     player_b = PlayerState("B", deck_b)
-    bus = EventBus()
-    register_default_keyword_handlers(bus)
 
     order = [(player_a, player_b, persona_a), (player_b, player_a, persona_b)]
 
-    # Opening hands.
+    # Opening hands, then the mulligan: each player may bottom any number
+    # of their seven, draw that many back, and reshuffle. Once per game.
     player_a.draw(7)
     player_b.draw(7)
+    if use_mulligan:
+        player_a.mulligan()
+        player_b.mulligan()
+
+    # Wire up card abilities AFTER the mulligan, so the bus sees the
+    # cards in their final zones.
+    bus = build_bus_for_game(player_a, player_b)
 
     turn_number = 0
     active_index = 0
@@ -49,6 +57,15 @@ def play_one_game(deck_a, persona_a, deck_b, persona_b) -> dict:
 
         active.ready_all()
         active.inked_this_turn = False
+
+        # Locations gain their lore at the start of your turn (they can't
+        # quest, so this is how they earn). Then start-of-turn abilities.
+        active.collect_location_lore()
+        bus.publish(ab.START_OF_TURN, controller=active)
+
+        winner_name = check_winner(player_a, player_b)
+        if winner_name:
+            return {"winner": winner_name, "turns": turn_number}
 
         # The player going first skips their very first draw (real rule).
         if not (first_player_first_turn and active_index == 0):
@@ -79,7 +96,8 @@ def play_one_game(deck_a, persona_a, deck_b, persona_b) -> dict:
 
 
 def run_monte_carlo(deck_a, persona_a, deck_b, persona_b,
-                     num_games: int = 10000, seed: int = None) -> pd.DataFrame:
+                     num_games: int = 10000, seed: int = None,
+                     use_mulligan: bool = True) -> pd.DataFrame:
     """Runs num_games simulated games and returns a pandas DataFrame with
     one row per game: columns ['winner', 'turns']."""
     if seed is not None:
@@ -87,7 +105,8 @@ def run_monte_carlo(deck_a, persona_a, deck_b, persona_b,
 
     results = []
     for _ in range(num_games):
-        results.append(play_one_game(deck_a, persona_a, deck_b, persona_b))
+        results.append(play_one_game(deck_a, persona_a, deck_b, persona_b,
+                                     use_mulligan=use_mulligan))
 
     return pd.DataFrame(results)
 

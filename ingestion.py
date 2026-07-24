@@ -20,6 +20,8 @@ import json
 import os
 import urllib.request
 
+import abilities
+
 LORCANAJSON_URL = "https://lorcanajson.org/files/current/en/allCards.json"
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
@@ -46,6 +48,11 @@ def fetch_card_database_live(url: str = LORCANAJSON_URL) -> dict:
         name = card.get("fullName") or card.get("name")
         if not name:
             continue
+        subtypes = [str(s).lower() for s in (card.get("subtypes") or [])]
+        ability_text = " ".join(
+            a.get("fullText", "") for a in (card.get("abilities") or [])
+        )
+
         cards[name] = {
             "name": name,
             "type": card.get("type", "character").lower(),
@@ -56,6 +63,18 @@ def fetch_card_database_live(url: str = LORCANAJSON_URL) -> dict:
             "willpower": card.get("willpower", 0),
             "lore": card.get("lore", 0),
             "keywords": card.get("keywordAbilities", []),
+            # setCode is what formats.py uses to decide Core legality.
+            # Illumineer's Quest cards use "Q1" rather than a number.
+            "set_code": str(card.get("setCode", "")),
+            # Songs are the Action subtype that characters can sing.
+            "song": "song" in subtypes,
+            # Locations use moveCost for characters moving onto them.
+            "move_cost": card.get("moveCost", 1),
+            # LorcanaJSON gives ability text as English prose, not
+            # structured effects. parse_ability_text() recognises only a
+            # few common phrasings and returns [] for everything else,
+            # so most real cards will have no abilities in this sim.
+            "abilities": abilities.parse_ability_text(ability_text),
         }
     return cards
 
@@ -113,6 +132,100 @@ def load_decklist(path: str, card_database: dict) -> list:
             deck.extend([card_info] * count)
 
     return deck
+
+
+NAME_COLUMN_CANDIDATES = [
+    "name", "card name", "cardname", "card", "full name", "fullname", "card_name",
+]
+COUNT_COLUMN_CANDIDATES = [
+    "count", "quantity", "qty", "normal", "amount", "owned", "have", "total",
+]
+FOIL_COLUMN_CANDIDATES = ["foil", "foils", "foil count", "foil quantity"]
+
+
+def load_collection_csv(path_or_file, card_database: dict = None) -> dict:
+    """
+    Reads a collection export (the CSV you download from Dreamborn.ink)
+    and returns a dict mapping card name -> number of copies you own.
+
+    WHY THIS IS FLEXIBLE RATHER THAN HARD-CODED:
+    Dreamborn's exact export column names aren't publicly documented, and
+    they've changed their site before. So instead of guessing one fixed
+    layout and breaking when it's wrong, this sniffs the header row for a
+    name-ish column and a count-ish column (see the candidate lists above).
+    If it can't find them, it raises a clear error telling you which
+    columns it DID see, so you can tell me and I'll add them.
+
+    Foil and non-foil counts are added together, since for deckbuilding
+    purposes a foil copy is still a playable copy.
+
+    If `card_database` is given, names not present in it are ignored
+    (with the count of skipped rows available via the '_unmatched' key).
+    """
+    import csv
+    import io
+
+    if hasattr(path_or_file, "read"):
+        raw = path_or_file.read()
+        if isinstance(raw, bytes):
+            raw = raw.decode("utf-8-sig", errors="replace")
+        handle = io.StringIO(raw)
+    else:
+        handle = open(path_or_file, "r", encoding="utf-8-sig")
+
+    try:
+        reader = csv.DictReader(handle)
+        if not reader.fieldnames:
+            raise ValueError("That CSV appears to be empty.")
+
+        lookup = {(f or "").strip().lower(): f for f in reader.fieldnames}
+
+        def find(candidates):
+            for cand in candidates:
+                if cand in lookup:
+                    return lookup[cand]
+            return None
+
+        name_col = find(NAME_COLUMN_CANDIDATES)
+        count_col = find(COUNT_COLUMN_CANDIDATES)
+        foil_col = find(FOIL_COLUMN_CANDIDATES)
+
+        if name_col is None:
+            raise ValueError(
+                "Couldn't find a card-name column in that CSV. "
+                f"Columns found: {reader.fieldnames}"
+            )
+
+        collection = {}
+        unmatched = 0
+        for row in reader:
+            name = (row.get(name_col) or "").strip()
+            if not name:
+                continue
+
+            def as_int(value):
+                try:
+                    return int(float(str(value).strip() or 0))
+                except (TypeError, ValueError):
+                    return 0
+
+            total = as_int(row.get(count_col)) if count_col else 1
+            if foil_col:
+                total += as_int(row.get(foil_col))
+            if total <= 0:
+                continue
+
+            if card_database is not None and name not in card_database:
+                unmatched += 1
+                continue
+
+            collection[name] = collection.get(name, 0) + total
+
+        if unmatched:
+            collection["_unmatched"] = unmatched
+        return collection
+    finally:
+        handle.close()
 
 
 if __name__ == "__main__":
